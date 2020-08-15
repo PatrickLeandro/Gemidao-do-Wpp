@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Gemidão do WhatsApp </title>
+  <style>
+    body{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    }
+    .whats{
+    color: black;
+    text-decoration: none;
+      
+    }
+    button{
+      border: 0ch;
+    }
+    @keyframes bounce {
+    0%, 20%, 60%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    80%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    }
+    
+    .text{
+    position: relative;
+    top: 1px;    
+}
+img{
+  position: relative;
+  top: 8px;
+}
+.botao1{
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;        
+    transform: translate(-50%,-50%);
+    color: #1670f0;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    }
+    .a:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.05);
+
+}    
+.a span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0c002b, #1779ff);
+    animation: animate1 1s linear infinite;
+
+}
+@keyframes animate1
+{
+    0%
+    {
+        transform: translateX(-100%);
+    }
+    100%
+    {
+        transform:translateX(100%);
+    }
+}
+.a span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0c002b, #1779ff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate2
+{
+    0%
+    {
+        transform: translateY(-100%);
+    }
+    100%
+    {
+        transform: translateY(100%);
+    }
+}
+.a span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, #0c002b, #1779ff);
+    animation: animate3 1s linear infinite;
+}
+@keyframes animate3
+{
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform:translateX(-100%);
+    }
+}
+.a span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top, #0c002b, #1779ff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate4
+{
+    0%
+    {
+        transform: translateY(100%);
+    }
+    100%
+    {
+        transform: translateY(-100%);
+    }
+}
+.container{
+  border: 1px solid black;
+  width: 350px;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  background: white;
+  box-shadow:5px 5px 10px rgba(0, 0, 0, 0.567);
+}
+.num{
+  position: relative;
+  bottom: 3px;
+  right: 1%;
+  font-size: 120%;
+  
+}
+.num1{
+  position: relative;
+  bottom: 3px;
+  left: 3%;
+  font-size: 120%;
+}
+h1{
+  color: red;
+  font-size: 28px;
+}
+.legenda{
+  color: #615b5b;
+  position: relative;
+  right: 6%;
+}
+.txt{
+  border: 1px solid rgb(143, 141, 141);
+  border-radius: 10px;
+}
+#result{
+  color: red;
+  
+}
+  </style>
+</head>
+
+<body>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center"><br>
+        <h1>Gemidão do WhatsApp <img src="whats.png" width="30px" alt=""></h1><br>
+        <p>Envie gratuitamente o gemidão do whatsapp por ligação para seus amigos</p>
+       <br><br>
+      </div>
+      <div class="col-md-4 ml-auto mr-auto">
+        <div class="form-group">
+          <label for="from" class="num">Número que vai ligar</label><br>
+          <input type="number" class="txt" id="from" placeholder=" (99) 99999-9999"> <br>
+          <small id="emailHelp" class="legenda">Digite apenas números.</small><br><br>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="to" class="num1">Número que vai receber</label><br>
+          <input type="number" class="txt" id="to" placeholder=" (99) 99999-9999"><br>
+          <small id="emailHelp" class="legenda">Digite apenas números.</small>
+        </div><br><br><br>
+        <a class="a botao1" onclick="send()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <section class="text">
+          <b>LIGAR</b> <img src="telefone.png" width="30px" alt="">
+          </section>        
+        </a><br><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 ml-auto mr-auto text-center mt-2">
+        <a class="whats"  href="whatsapp://send?text=ISSO É UM TESTE DE TEXTO"
+            target="_blank">
+            Compartilhar no WhatsApp <img src="whats.png" width="30px" alt="">
+        </a><br><br><br><br><a >
+        
+        
+    </div>
+  </div>
+  <div id="result" class="lead m-5 text-danger text-uppercase">
+  </div>
+ 
+</body>
+<script type="text/javascript">
+function send() {
+  var container = document.createElement('div');
+  container.align = 'center';
+  var result = document.getElementById('result');
+  var audio = document.createElement('audio');
+  // audio.autoplay = true;
+  audio.play(); // 
+  var source = document.createElement('source');
+  source.type = 'audio/mpeg';
+  source.src = 'gemidao.mp3';
+  var message = document.createTextNode('Pra você aprender a não zoar o coleguinha kkkkkkk');
+  audio.appendChild(source);
+  container.appendChild(audio);
+  container.appendChild(message);
+  result.appendChild(container);
+}
+</script>
+
+
+</html>
